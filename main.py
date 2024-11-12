@@ -12,7 +12,7 @@ import torchvision.datasets as datasets
 import misc
 from misc import NativeScalerWithGradNormCount as NativeScaler
 from dataloader import SALICON, MIT, OSIE_ASD, SALICON_Image, MIT_Image, Emotion
-from model import Blind_Transformer, Blind_Transformer_MS, Blind_Transformer_MS_Reweight, Blind_Transformer_MS_Reweight_Lang, Blind_Transformer_MS_NOATT
+from model import Blind_Transformer_MS, Blind_Transformer_MS_Reweight
 from trainer import single_epoch_training, evaluation, single_epoch_training_image, evaluation_image
 import pickle
 from glob import glob
@@ -28,9 +28,6 @@ from transalnet import TranSalNet
 from copy import deepcopy
 from drawing_util import draw_bounding_box_around_important_regions, draw_optimal_bounding_box, overlay_heatmap
 from evaluation import cal_sim_score, cal_auc_score
-from salicon_model import SALICON_Model
-from emlnet import EML_Net
-from simplenet import SimpleNet
 from matplotlib.gridspec import GridSpec
 
 def get_args_parser():
